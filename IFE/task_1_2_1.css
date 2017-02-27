@@ -1,0 +1,29 @@
+@charset "utf-8";
+/* CSS Document */
+body{background-color: #dddddd;}
+.article{background-color: white;width: 1200px;margin-left: auto; margin-right: auto;padding: 20px;box-shadow: 3px 3px 3px #555555;margin-bottom:  20px;margin-top: 80px;} 
+body h2{color: #888888}
+
+#top{position: fixed;background-color: blue;width:100%;top:0px;left:0px;}
+#top img{margin-left: 40px;margin-top: 8px;}
+#nav{float: right;font-size: 16px;} 
+#nav li{float: left;padding-right: 20px;padding-left: 20px;}
+#nav li a{color: white;}
+
+.articleContent{text-indent: 1em;}
+
+#part1{}
+
+
+#part3 div{height:100px;width:120px;border:1px solid #363434;margin-left:40px;margin-top: 20px;margin-bottom: 20px;text-align: center}
+
+
+#aside{background-color: white;padding: 20px;width: 1200px;margin: 0 auto; }
+#aside label{vertical-align: middle}
+.right-aside{float: right;padding: 10px;}
+.gray{color: #777777;font-family:Microsoft YaHei;font-size: 15px;}
+form{width: 700px; margin: 0 auto;}
+
+
+
+
