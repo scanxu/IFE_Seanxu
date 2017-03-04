@@ -1,0 +1,38 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*运用float实现浮动布局*/
+#outer{background-color: #eee;padding: 20px;border: 1px solid #999;clear: both;overflow: hidden;}
+
+#teamName{width: 200px;height: 120px;border: 1px solid #999;float: left;background-color: white;}
+#teamLogo{width: 80px;height: 80px;margin:20px;border: 1px solid #999;display: inline-block;float: left;}
+#name{margin-top: 20px;width: 75px;display: inline-block;float: left;font-family:'KaiTi';font-size: 18px;}
+
+#teamMember{border: 1px solid #999;float: right;width:120px;height:420px;margin-left: 20px;background-color:white;}
+.member{border: 1px solid #999;width:80px;height:80px; float:left;margin-top: 18px;margin-left:19px; }
+
+#content{border: 1px solid #999;margin-left:220px; margin-right: 140px; padding: 20px;background-color: white}
+
+/*运用position实现定位布局，发现父元素outer无法被绝对定位的子元素teamMember撑开，不能满足需求*/
+/*
+#outer{background-color: #eee;padding: 20px;border: 1px solid #999;overflow: hidden;}
+
+#teamName{width:200px;height:120px;border:1px solid #999;position: absolute;background-color: white;}
+#teamLogo{width: 80px;height: 80px;margin:20px;border: 1px solid #999;display: inline-block;float: left;}
+#name{margin-top: 20px;width: 75px;display: inline-block;float: left;font-family:'KaiTi';font-size: 18px;}
+
+#teamMember{border: 1px solid #999;position: absolute; width:120px;height:420px;;background-color:white;right:28px;}
+.right:after{content: '.';clear: both;height: 0px;*zoom:1;overflow: hidden;}
+.member{border: 1px solid #999;width:80px;height:80px; float:left;margin-top: 18px;margin-left:19px; }
+
+#content{border: 1px solid #999;margin-left:220px; margin-right: 140px; padding: 20px;background-color: white;}
+*/
+
+
+
+
+
+
+
+
+

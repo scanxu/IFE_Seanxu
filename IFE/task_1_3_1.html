@@ -1,0 +1,44 @@
+<!doctype html>
+<!--
+任务目标
+掌握HTML/CSS布局的概念
+掌握盒模型的概念
+掌握position与float的概念以及在布局时的用法
+任务描述
+使用 HTML 与 CSS 按照 示例图（点击查看） 实现三栏式布局。
+左右两栏宽度固定，中间一栏根据父元素宽度填充满，最外面的框应理解为浏览器。背景色为 #eee 区域的高度取决于三个子元素中最高的高度。
+任务注意事项
+尝试 position 和 float 的效果，思考它们的异同和应用场景。
+注意测试不同情况，尤其是极端情况下的效果。
+图片和文字内容请自行替换，尽可能体现团队的特色。
+调节浏览器宽度，固定宽度和自适应宽度的效果始终符合预期。
+改变中间一栏的内容长度，以确保在中间一栏较高和右边一栏较高时，父元素的高度始终为子元素中最高的高度。
+其他效果图中给出的标识均被正确地实现。
+-->
+<html>
+<head>
+<meta charset="utf-8">
+<title>团队介绍</title>
+<link rel="stylesheet" href="task_1_3_1.css" type="text/css"/>
+</head>
+
+<body>
+<div id="outer">
+	<!--左侧团队名称-->
+	<div id="teamName">
+		<img id="teamLogo" src="teamLogo.jpg">
+		<div id="name">薛定谔的盒子？猫</div>
+	</div>
+	<!--右侧成员头像-->
+	<div id="teamMember" class="right">
+		<div class="member"><img alt="logo" src="movepic.gif" width="80px"></div>
+		<div class="member"><img alt="logo" src="movepic.gif" width="80px"></div>
+		<div class="member"><img alt="logo" src="movepic.gif" width="80px"></div>
+		<div class="member"><img alt="logo" src="movepic.gif" width="80px"></div>
+	</div>
+	
+	<!--中间文字内容-->
+	<div id="content"><p>这是<strong>一个人</strong>的团队。<br>我叫Sean，完全的前端新手。<br>大学期间没找到方向，以致毕业出来在教育行业混了一两年，想转到前端方向。<br>没什么经验，凭着自学的一点前端知识前来刷题，希望在接下来的两个月中能边学习边有所收获！</p><p>团队的名字就叫“薛定谔的盒子?猫”，有一点量子力学的哲(zhuang)理(bi)性，哈哈。</p><p>PS:头像不知道用什么好，试了一下GIF，居然完美支持！</p></div>				
+</div>
+</body>
+</html>
