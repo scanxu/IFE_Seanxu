@@ -1,0 +1,134 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.5, minimum-scale=1.5, maximum-scale=1.5, user-scalable=no"/>
+<title>简单计算器</title>
+<link rel="stylesheet" href="calculator.css" type="text/css">
+</head>
+
+<div id="container">
+<body>
+<div class="outer">
+	<div class="showbox">
+		<p class="input" id="input"></p>
+		<hr> 
+		<p class="result" id="result"></p>
+	</div>
+	<div class="main-border">
+		<div class="row row1" >
+			<div class="cell cell-ac" id="ac">AC</div>
+			<div class="cell" id="back" onClick="document.getElementById('input').innerHTML = document.getElementById('input').innerHTML.slice(0,-1);">←</div>
+			<div class="cell" id="divide">÷</div>
+		</div>
+		<div class="row row2">
+			<div class="cell" id="seven" value="7">7</div>
+			<div class="cell" id="eight" value="8" >8</div>
+			<div class="cell" id="nine" value="9" >9</div>	
+			<div class="cell" id="mutiple">×</div>
+		</div>
+		<div class="row row3">
+			<div class="cell" id="four" value="4" >4</div>
+			<div class="cell" id="five" value="5" >5</div>
+			<div class="cell" id="six" value="6" >6</div>			
+			<div class="cell" id="plus" value="+">+</div>
+		</div>
+		<div class="row row4">
+			<div class="cell" id="one" value="1" >1</div>
+			<div class="cell" id="two" value="2" >2</div>
+			<div class="cell" id="three" value="3" >3</div>			
+			<div class="cell" id="minus" value="-">-</div>
+		</div>
+		</div>
+		<div class="row row5">
+			<div class="cell" id="zero" value="0">0</div>
+			<div class="cell" id="point" value=".">.</div>
+			<div class="cell cell-equal" id="equal">=</div>
+		</div>
+</div>
+</body>
+</div>
+<script type="text/javascript">
+	var equal = document.getElementById("equal"),
+		input = document.getElementById("input"),
+	    result = document.getElementById("result"),
+	    resultNum = 0,
+	    temp = 0,
+	    i;
+
+	//初始化
+	input.innerHTML = "0";
+	result.innerHTML = "0";
+
+	//
+	var clickOn = function(value){
+		if(parseInt(input.innerHTML) === 0){input.innerHTML = "";}
+		document.getElementById("input").innerHTML += String(value);
+	};
+
+	document.getElementById("one").addEventListener("click",function(){clickOn(1);});
+	document.getElementById("two").addEventListener("click",function(){clickOn(2);});
+	document.getElementById("three").addEventListener("click",function(){clickOn(3);});
+	document.getElementById("four").addEventListener("click",function(){clickOn(4);});
+	document.getElementById("five").addEventListener("click",function(){clickOn(5);});
+	document.getElementById("six").addEventListener("click",function(){clickOn(6);});
+	document.getElementById("seven").addEventListener("click",function(){clickOn(7);});
+	document.getElementById("eight").addEventListener("click",function(){clickOn(8);});
+	document.getElementById("nine").addEventListener("click",function(){clickOn(9);});
+	document.getElementById("zero").addEventListener("click",function(){clickOn(0);});
+	document.getElementById("point").addEventListener("click",function(){clickOn(".");});
+
+
+	document.getElementById("plus").addEventListener("click",function(){clickOn("+");});
+	document.getElementById("minus").addEventListener("click",function(){clickOn("-");});
+	document.getElementById("mutiple").addEventListener("click",function(){clickOn("*");});
+	document.getElementById("divide").addEventListener("click",function(){clickOn("/");});
+
+
+
+	//AC键all clear清零
+	document.getElementById("ac").addEventListener("click",function(){input.innerHTML = '0';}) ;
+	document.getElementById("ac").addEventListener("click",function(){result.innerHTML = '0';}) ;	
+
+
+	var equalSig = function(){	
+		
+		
+		//判断输入值是否为零
+		if(parseInt(input.innerHTML) === 0){resultText = "0";input.innerHTML = "0";}
+			result.innerHTML = String(eval(input.innerHTML));
+
+
+		// //判断是否包含四则运算符
+		// 	else if(!(/\d{1,}[\+-]\d{0,}/.test(input.innerHTML)))
+		// 		{result.innerHTML = input.innerHTML;}
+
+		// 	else if(input.innerHTML.indexOf("+") != -1)//加法
+		// 		{
+		// 			var plusIndex = input.innerHTML.split("+");
+		// 			for(i = 0 ;i < plusIndex.length ; i++)
+		// 			{
+		// 				resultNum += parseInt(plusIndex[i]);
+		// 			}
+		// 			result.innerHTML = resultNum;
+		// 			resultNum = 0;
+		// 		}
+
+		// 	else if(input.innerHTML.indexOf("-") != -1)//减法
+		// 		{
+		// 			var minusIndex = input.innerHTML.split("-");
+		// 			for(i = 1 ;i < minusIndex.length ; i++)
+		// 			{
+		// 				temp += parseInt(minusIndex[i]);
+		// 			}
+		// 			resultNum = minusIndex[0] - temp;
+		// 			result.innerHTML = resultNum;
+		// 			resultNum = 0;
+		// 			temp = 0;
+		// 		}
+
+	};
+equal.addEventListener("click",equalSig);
+
+</script>
+</html>
