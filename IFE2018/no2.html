@@ -1,0 +1,46 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>No.2 - 初步接触 CSS 2D 变形</title>
+<style>
+	.box{
+		float: left;
+		margin:20px;
+		width: 100px;
+		height: 100px;
+		border:2px solid rgba(103,99,99,0.60);
+		background-color: rgba(209,209,209,0.60);
+		text-align: center;
+		font: 20px "Microsoft Yahei";
+		line-height: 100px;
+		
+	}
+	#div2{	
+		transform:skewX(30deg);
+	}
+	#div3{	
+		transform:scaleX(0.5);
+	}
+	#div4{	
+		transform:rotate(45deg);
+	}
+	#div5{	
+		transform:translate(10px,20px);
+	}
+	#div6{	
+		transform:skewX(30deg) scaleX(0.5) rotate(45deg) translate(10px,20px);
+	}
+</style>
+</head>
+
+<body>
+<div class="box" id="div1">box0</div>
+<div class="box" id="div2">box1</div>
+<div class="box" id="div3">box2</div>
+<div class="box" id="div4">box3</div>
+<div class="box" id="div5">box4</div>
+<div class="box" id="div6">box5</div>
+
+</body>
+</html>
