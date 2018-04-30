@@ -1,0 +1,66 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>切换样式</title>
+<style>
+	#content{
+		margin:0 auto;
+		width:100px;
+	}
+	#webLearning{
+		width:100px;
+		font-family:"Microsoft Yahei";
+		font-size: 25px;
+		font-weight: 800;
+		display: inline-block;
+	}
+	#btn1{
+		display: inline-block;
+		margin-top:20px;
+		width:90px;
+		height:38px;
+		font-family: "Microsoft Yahei";
+		font-size: 18px;
+		font-weight: 500;
+		border-radius: 15px;
+	}
+	span{
+		width:0;
+		border-bottom: 3px solid #4169E1;
+		margin-left: auto;
+		margin-right: auto;
+		height:15px;
+		display: block;
+		-webkit-transition:width 0.5s;
+	}
+	.line1{
+		width:100px;
+	}
+</style>
+</head>
+
+<body>
+	<div id="frame">
+		<div id="content">
+			<div id="webLearning">前端学院</div>
+			<span id="line"></span>
+			<input type="button" id="btn1" value="切换样式">
+		</div>
+	</div>
+</body>
+<script>
+	var sty1 = document.getElementById("webLearning").style;
+	var line = document.getElementById("line");
+	document.getElementById("btn1").onclick= function (){
+		
+		sty1.color="#4169E1";
+		line.classList.add("line1");
+		
+		setTimeout("sty1.color='#000'",1000);
+		setTimeout("line.classList.remove('line1')",1000);
+		clearTimeout();
+		
+	}
+</script>
+</html>
